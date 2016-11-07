@@ -1,0 +1,21 @@
+{
+    "name": "ionic-plugin-maps",
+    "version": "1.0.1",
+    "cordova": {
+        "id": "ionic-plugin-maps",
+        "platforms": [
+            "ios"
+        ]
+    },
+    "description": "Ionic Maps Plugin",
+    "keywords": [
+        "ionic",
+        "cordova",
+        "maps",
+        "ecosystem:cordova",
+        "cordova-android",
+        "cordova-ios"
+    ],
+    "author": "Yennq",
+    "license": "Apache 2.0"
+}

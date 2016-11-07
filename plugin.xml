@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="ionic-plugin-maps"
+    version="1.0.1">
+    <name>Maps</name>
+    <description>Ionic Maps Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>Ionic,keyboard</keywords>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/ios/maps.js" name="showAll">
+            <runs/>
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="showAll">
+                <param name="ios-package" value="IonicMaps" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/IonicMaps.h" />
+        <source-file src="src/ios/IonicMaps.m" />
+    </platform>
+</plugin>
