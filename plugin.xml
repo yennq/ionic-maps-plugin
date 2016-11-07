@@ -7,8 +7,8 @@
     <description>Ionic Maps Plugin</description>
     <license>Apache 2.0</license>
     <keywords>Ionic,keyboard</keywords>
-    <repo>https://github.com/yennq/ionic-maps-plugin.git</repo>
-    <issue>https://github.com/yennq/ionic-maps-plugin/issues</issue>
+    <repo>https://github.com/yennq/ionic-plugin-maps.git</repo>
+    <issue>https://github.com/yennq/ionic-plugin-maps/issues</issue>
     
     <!-- ios -->
     <platform name="ios">
