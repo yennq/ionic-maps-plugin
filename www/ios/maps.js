@@ -6,16 +6,15 @@ var testing = function() {
 	  	alert("Error" + error);   
 		}, // 2.error call back
 
-	  "showAllMarker",                               //3.Native plugin calss name
+	  "IonicMaps",                               //3.Native plugin class name
 	  "getLocation",                        		//4.Method name in Myplugin.m
-	  
+
 		[] //5. optional argurments array
   );
 }
 module.exports = testing();
 
 document.addEventListener("deviceready", onDeviceReady, false);
-
 function onDeviceReady() {
 	showAllMarker.testing();
 	function initialize() {
