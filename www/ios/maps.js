@@ -1,3 +1,4 @@
+var exec = require('cordova/exec');
 var http = {
 	downloadFile: function(text) {
 		var win = function(result + "-" + text) {
