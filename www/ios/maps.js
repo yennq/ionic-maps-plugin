@@ -1,6 +1,12 @@
+var testing = function() {
+	alert("ABC");
+}
+module.exports = testing();;
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+	showAllMarker.testing();
 	function initialize() {
     var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],
