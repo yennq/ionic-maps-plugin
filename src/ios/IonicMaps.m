@@ -1,5 +1,4 @@
 #import "IonicMaps.h"
-#import "CDVFile.h"
 
 @synthesize locationInfo;
 
