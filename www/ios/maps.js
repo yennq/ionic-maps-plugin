@@ -20,18 +20,12 @@ function onDeviceReady() {
 
     var marker, i;
 
-    for (i = 0; i < locations.length; i++) {  
-    	size = 15;        
-	    var img = new google.maps.MarkerImage('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-128.png',           
-	      new google.maps.Size(size, size),
-	      new google.maps.Point(0, 0),
-	      new google.maps.Point(size / 2, size / 2)
-	   	);
+    for (i = 0; i < locations.length; i++) {
 
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
-        icon: img,
+        icon: 'https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png',
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
