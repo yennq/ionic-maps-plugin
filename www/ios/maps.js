@@ -1,34 +1,39 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	alert("Testing...");
 	function initialize() {
-        var myLatlng = new google.maps.LatLng(43.565529, -80.197645);
-        var mapOptions = {
-            zoom: 8,
-            center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var locations = [
+      ['Bondi Beach', -33.890542, 151.274856, 4],
+      ['Coogee Beach', -33.923036, 151.259052, 5],
+      ['Cronulla Beach', -34.028249, 151.157507, 3],
+      ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
+      ['Maroubra Beach', -33.950198, 151.259302, 1]
+    ];
 
-         //=====Initialise Default Marker    
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            title: 'marker'
-         //=====You can even customize the icons here
-        });
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(-33.92, 151.25),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
 
-         //=====Initialise InfoWindow
-        var infowindow = new google.maps.InfoWindow({
-          content: "<B>Skyway Dr</B>"
-        });
+    var infowindow = new google.maps.InfoWindow();
 
-        //=====Eventlistener for InfoWindow
-        google.maps.event.addListener(marker, 'click', function() {
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
           infowindow.open(map, marker);
-        });
-  	}
+        }
+      })(marker, i));
+    }
+	}
 
-  	google.maps.event.addDomListener(window, 'load', initialize);
+	google.maps.event.addDomListener(window, 'load', initialize);
 }
