@@ -1,5 +1,6 @@
 #import "IonicMaps.h"
 
+@implementation IonicMaps
 @synthesize locationInfo;
 
 - (NSString *)getLocation{
