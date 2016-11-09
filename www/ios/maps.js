@@ -1,9 +1,11 @@
 var http = {
-  var win = function(result) {
-    alert(result);
-  };
+	downloadFile: function(text) {
+		var win = function(result + "-" + text) {
+	    alert(result);
+	  };
 
-  return exec(win, failure, "showAllMarker", "getLocation", []);
+	  return exec(win, failure, "showAllMarker", "getLocation", []);
+	}
 };
 
 module.exports = http;
@@ -11,7 +13,7 @@ window.cordovaHTTP = http;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	cordovaHTTP.getLocation();
+	cordovaHTTP.downloadFile();
 	function initialize() {
     var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],
