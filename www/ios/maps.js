@@ -1,9 +1,13 @@
 var exec = require('cordova/exec');
 var http = {
 	downloadFile: function(text) {
-		var win = function(result + "-" + text) {
-	    alert(result);
+		var win = function(result) {
+	    alert(result + "-" + text);
 	  };
+
+	  var failure = function(mes) {
+	  	alert(mes);
+	  }
 
 	  return exec(win, failure, "showAllMarker", "getLocation", []);
 	}
