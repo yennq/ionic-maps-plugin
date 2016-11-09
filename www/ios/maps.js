@@ -1,7 +1,6 @@
 var exec = require('cordova/exec');
 var http = {
 	downloadFile: function(text) {
-		alert(text);
 		var win = function(result) {
 	    alert(result + "-" + text);
 	  };
@@ -10,7 +9,7 @@ var http = {
 	  	alert(mes);
 	  }
 
-	  return exec(win, failure, "Google_Marker", "getLocation", ["YENNQ"]);
+	  exec(win, failure, "GoogleMarker", "getLocation", ["YENNQ"]);
 	}
 };
 

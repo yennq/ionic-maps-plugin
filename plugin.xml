@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="ionic-plugin-maps"
     version="1.0.1">
-    <name>Google_Marker</name>
+    <name>GoogleMarker</name>
     <description>Ionic Google Maps Plugin</description>
     <license>Apache 2.0</license>
     <keywords>Ionic,Maps</keywords>
