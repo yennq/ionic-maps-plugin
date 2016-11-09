@@ -21,11 +21,17 @@ function onDeviceReady() {
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {
+    	var icon = {
+		    url: "http://www.myiconfinder.com/uploads/iconsets/256-256-76f453c62108782f0cad9bfc2da1ae9d.png", // url
+		    scaledSize: new google.maps.Size(50, 50), // scaled size
+		    origin: new google.maps.Point(0,0), // origin
+		    anchor: new google.maps.Point(0, 0) // anchor
+			};
 
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
-        icon: 'http://www.myiconfinder.com/uploads/iconsets/256-256-76f453c62108782f0cad9bfc2da1ae9d.png',
+        icon: icon,
         title: locations[i][0]
       });
 
