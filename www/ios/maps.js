@@ -1,7 +1,7 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	console.log("123");
+	alert("Testing...");
 	function initialize() {
         var myLatlng = new google.maps.LatLng(43.565529, -80.197645);
         var mapOptions = {
