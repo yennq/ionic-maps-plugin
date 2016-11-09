@@ -21,9 +21,18 @@ function onDeviceReady() {
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {  
+    	size = 15;        
+	    var img = new google.maps.MarkerImage('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-128.png',           
+	      new google.maps.Size(size, size),
+	      new google.maps.Point(0, 0),
+	      new google.maps.Point(size / 2, size / 2)
+	   	);
+
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-        map: map
+        map: map,
+        icon: img,
+        title: locations[i][0]
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
