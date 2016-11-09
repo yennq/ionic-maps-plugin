@@ -3,8 +3,8 @@
 @implementation IonicMaps
 @synthesize locationInfo;
 
-- (NSString *)getLocation{
-    return @"Nguyen Quang Yen";
+- (void)getLocation{
+    
 }
 
 @end

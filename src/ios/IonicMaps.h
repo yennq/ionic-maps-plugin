@@ -6,6 +6,6 @@
 
 @property (nonatomic, strong) CLLocation* locationInfo;
 
-- (NSString *)getLocation;
+- (void)getLocation;
 
 @end
