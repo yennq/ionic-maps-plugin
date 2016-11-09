@@ -2,10 +2,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import <Cordova/CDVPlugin.h>
 
-@interface IonicMaps: CDVPlugin
+@interface IonicMaps: CDVPlugin {
+	CLLocation* locationInfo;
+}
 
 @property (nonatomic, strong) CLLocation* locationInfo;
 
-- (void)getLocation;
+- (NSString *)getLocation;
 
 @end
