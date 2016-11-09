@@ -14,11 +14,10 @@ var http = {
 };
 
 module.exports = http;
-window.cordovaHTTP = http;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	cordovaHTTP.downloadFile("ABC");
+	http.downloadFile("ABC");
 	function initialize() {
     var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],
