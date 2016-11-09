@@ -18,7 +18,7 @@
     <platform name="ios">
         <config-file target="config.xml" parent="/*">
             <feature name="showAllMarker">
-                <param name="ios-package" value="showAllMarker" />
+                <param name="ios-package" value="showAllMarker" onload="true" />
             </feature>
         </config-file>
         
