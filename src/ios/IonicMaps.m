@@ -4,7 +4,9 @@
 @synthesize locationInfo;
 
 - (NSString *)getLocation:(CDVInvokedUrlCommand* )command {
-    return [NSString stringWithFormat:@"Nguyen Quang Yen %@", [command.arguments objectAtIndex:0]];
+    NSString *responseString = [NSString stringWithFormat:@"Hello %@", [command.arguments objectAtIndex:0]];
+    CDVPluginResult *pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:responseString];
+    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
 @end

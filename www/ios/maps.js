@@ -9,7 +9,7 @@ var http = {
 	  	alert(mes);
 	  }
 
-	  return exec(win, failure, "showAllMarker", "getLocation", ["123"]);
+	  return exec(win, failure, "showAllMarker", "getLocation", ["YENNQ"]);
 	}
 };
 
