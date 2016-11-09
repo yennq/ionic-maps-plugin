@@ -25,7 +25,8 @@ function onDeviceReady() {
       marker = new google.maps.Marker({
         position: new google.maps.LatLng(locations[i][1], locations[i][2]),
         map: map,
-        icon: 'https://maps.google.com/mapfiles/kml/shapes/parking_lot_maps.png',
+        icon: 'http://www.myiconfinder.com/uploads/iconsets/256-256-76f453c62108782f0cad9bfc2da1ae9d.png',
+        title: locations[i][0]
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
