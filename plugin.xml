@@ -3,19 +3,19 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="ionic-plugin-maps"
     version="1.0.1">
-    <name>showAllMarker</name>
-    <description>Ionic Maps Plugin</description>
+    <name>Ionic - Google Marker</name>
+    <description>Ionic Google Maps Plugin</description>
     <license>Apache 2.0</license>
-    <keywords>Ionic,keyboard</keywords>
+    <keywords>Ionic,Maps</keywords>
     <repo>https://github.com/yennq/ionic-plugin-maps.git</repo>
     <issue>https://github.com/yennq/ionic-plugin-maps/issues</issue>
+
+    <js-module src="www/ios/maps.js" name="showAllMarker">
+        <clobbers target="showAllMarker" />
+    </js-module>
     
     <!-- ios -->
     <platform name="ios">
-        <js-module src="www/ios/maps.js" name="showAllMarker">
-            <clobbers target="showAllMarker" />
-        </js-module>
-        
         <config-file target="config.xml" parent="/*">
             <feature name="showAllMarker">
                 <param name="ios-package" value="showAllMarker" />
