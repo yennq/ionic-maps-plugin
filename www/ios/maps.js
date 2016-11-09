@@ -21,7 +21,7 @@ function onDeviceReady() {
     var marker, i;
 
     for (i = 0; i < locations.length; i++) {
-    	var size = 15;
+    	var size = 30;
     	var icon = {
 		    url: "http://www.myiconfinder.com/uploads/iconsets/256-256-76f453c62108782f0cad9bfc2da1ae9d.png", // url
 		    scaledSize: new google.maps.Size(size, size), // scaled size
