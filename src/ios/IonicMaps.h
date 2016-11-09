@@ -1,9 +1,11 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface IonicMaps: NSObject
+@interface IonicMaps: NSObject {
+	CLLocation* locationInfo;
+}
 
-@property (nonatomic, strong) CLLocationManager* locationManager;
+@property (nonatomic, strong) CLLocation* locationInfo;
 
 - (NSString *)getLocation;
 
