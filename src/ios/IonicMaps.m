@@ -3,7 +3,7 @@
 @implementation IonicMaps
 
 - (NSString *)getLocation{
-    return "Nguyen Quang Yen";
+    return @"Nguyen Quang Yen";
 }
 
 @end
