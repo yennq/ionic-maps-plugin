@@ -1,8 +1,6 @@
 //myButton1
 var exec = require('cordova/exec');
-function MyPlugin() {}
-
-MyPlugin.prototype.getLocation = function(data,data2) {
+var getLocation = function() {
 	exec(function(result) {
   	alert('succescallback :' + result);
   }, //1.success callbal
@@ -21,12 +19,11 @@ MyPlugin.prototype.getLocation = function(data,data2) {
   );
 }
 
-var myPlugin = new MyPlugin();
-module.exports = myPlugin
+module.exports = getLocation
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	myPlugin.getLocation();
+	showAllMarker.getLocation();
 	function initialize() {
     var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],
