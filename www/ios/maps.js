@@ -1,29 +1,23 @@
-//myButton1
-var exec = require('cordova/exec');
-var getLocation = function() {
+var testing = function() {
 	exec(function(result) {
-  	alert('succescallback :' + result);
-  }, //1.success callbal
-  function(error) {
-  	alert("Error" + error);   
-	}, // 2.error call back
+	  	alert('succescallback :' + result);
+	  }, //1.success callbal
+	  function(error) {
+	  	alert("Error" + error);   
+		}, // 2.error call back
 
-  "showAllMarker",                               //3.Native plugin calss name
-  "getLocation",                        		//4.Method name in Myplugin.m
-	[
-  	{
-			"RequestId": "data",
-			"ServiceName": "data2"   //5. optional argurments array
-  	}
-	]
+	  "showAllMarker",                               //3.Native plugin calss name
+	  "getLocation",                        		//4.Method name in Myplugin.m
+	  
+		[] //5. optional argurments array
   );
 }
-
-module.exports = getLocation
+module.exports = testing();
 
 document.addEventListener("deviceready", onDeviceReady, false);
+
 function onDeviceReady() {
-	showAllMarker.getLocation();
+	showAllMarker.testing();
 	function initialize() {
     var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],
