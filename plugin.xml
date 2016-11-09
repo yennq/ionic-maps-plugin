@@ -3,7 +3,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     id="ionic-plugin-maps"
     version="1.0.1">
-    <name>Maps</name>
+    <name>showAllMarker</name>
     <description>Ionic Maps Plugin</description>
     <license>Apache 2.0</license>
     <keywords>Ionic,keyboard</keywords>
@@ -18,7 +18,7 @@
         
         <config-file target="config.xml" parent="/*">
             <feature name="showAllMarker">
-                <param name="ios-package" value="IonicMaps" />
+                <param name="ios-package" value="showAllMarker" />
             </feature>
         </config-file>
         
@@ -31,6 +31,6 @@
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>$GEOLOCATION_USAGE_DESCRIPTION</string>
         </config-file>
-        
+
     </platform>
 </plugin>

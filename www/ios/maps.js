@@ -1,22 +1,17 @@
-var testing = function() {
-	exec(function(result) {
-	  	alert('succescallback :' + result);
-	  }, //1.success callbal
-	  function(error) {
-	  	alert("Error" + error);   
-		}, // 2.error call back
+var http = {
+  var win = function(result) {
+    alert(result);
+  };
 
-	  "IonicMaps",                               //3.Native plugin class name
-	  "getLocation",                        		//4.Method name in Myplugin.m
+  return exec(win, failure, "showAllMarker", "getLocation", []);
+};
 
-		[] //5. optional argurments array
-  );
-}
-module.exports = testing();
+module.exports = http;
+window.cordovaHTTP = http;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	showAllMarker.testing();
+	cordovaHTTP.getLocation();
 	function initialize() {
     var locations = [
       ['Bondi Beach', -33.890542, 151.274856, 4],

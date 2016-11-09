@@ -1,6 +1,6 @@
 #import "IonicMaps.h"
+#import "CDVFile.h"
 
-@implementation IonicMaps
 @synthesize locationInfo;
 
 - (NSString *)getLocation{
