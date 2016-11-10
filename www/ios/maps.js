@@ -1,24 +1,27 @@
-var exec = require('cordova/exec');
-var http = {
-	downloadFile: function(text) {
-		var win = function(result) {
-	    alert(result + "-" + text);
-	  };
+// using exec and cordova library
+var exec = require('cordova/exec'),
+    cordova = require('cordova');
 
-	  var failure = function(mes) {
-	  	alert(mes);
-	  }
+var GoogleMarker = function() {};
 
-	  exec(win, failure, "GoogleMarker", "getLocation", ["YENNQ"]);
-	}
+GoogleMarker.getLocation = function() {
+  var success = function(result) {
+    alert("result: " + result);
+  }
+
+  var error = function(msg) {
+    alert("error: " + msg);
+  }
+
+  exec(success, error, "GoogleMarker", "getLocation", ["YENNQ"]);
 };
 
-module.exports = http;
-window.cordovaHTTP = http;
+module.exports = GoogleMarker;
 
 document.addEventListener("deviceready", onDeviceReady, false);
 function onDeviceReady() {
-	cordovaHTTP.downloadFile("ABC");
+  // call function of plugin
+	cordova.plugins.GoogleMarker.getLocation();
 
 	function initialize() {
     var locations = [

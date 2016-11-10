@@ -4,21 +4,22 @@
     id="ionic-plugin-maps"
     version="1.0.1">
     <name>GoogleMarker</name>
-    <description>Ionic Google Maps Plugin</description>
+    <description>Google Maps Plugin</description>
     <license>Apache 2.0</license>
     <keywords>Ionic,Maps</keywords>
     <repo>https://github.com/yennq/ionic-plugin-maps.git</repo>
     <issue>https://github.com/yennq/ionic-plugin-maps/issues</issue>
-
-    <js-module src="www/ios/maps.js" name="showAllMarker">
-        <clobbers target="showAllMarker" />
-    </js-module>
     
     <!-- ios -->
     <platform name="ios">
+        <js-module src="www/ios/maps.js" name="showAllMarker">
+            <runs/>
+            <clobbers target="cordova.plugins.GoogleMarker" />
+        </js-module>
+
         <config-file target="config.xml" parent="/*">
-            <feature name="showAllMarker">
-                <param name="ios-package" value="showAllMarker" onload="true" />
+            <feature name="GoogleMarker">
+                <param name="ios-package" value="IonicMaps" onload="true" />
             </feature>
         </config-file>
         
@@ -31,6 +32,5 @@
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>$GEOLOCATION_USAGE_DESCRIPTION</string>
         </config-file>
-
     </platform>
 </plugin>
