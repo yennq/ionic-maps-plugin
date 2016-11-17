@@ -13,7 +13,6 @@
     <!-- ios -->
     <platform name="ios">
         <js-module src="www/ios/maps.js" name="showAllMarker">
-            <runs/>
             <clobbers target="cordova.plugins.GoogleMarker" />
         </js-module>
 
@@ -22,15 +21,33 @@
                 <param name="ios-package" value="IonicMaps" onload="true" />
             </feature>
         </config-file>
-        
+
         <header-file src="src/ios/IonicMaps.h" />
         <source-file src="src/ios/IonicMaps.m" />
 
+        <header-file src="src/ios/AWIconAnnotationView.h" />
+        <source-file src="src/ios/AWIconAnnotationView.m" />
+
+        <header-file src="src/ios/Place.h" />
+        <source-file src="src/ios/Place.m" />
+
+        <header-file src="src/ios/MPGTextField.h" />
+        <source-file src="src/ios/MPGTextField.m" />
+
         <framework src="CoreLocation.framework" />
+        <framework src="MapKit.framework" />
         
         <preference name="GEOLOCATION_USAGE_DESCRIPTION" default=" " />
         <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
             <string>$GEOLOCATION_USAGE_DESCRIPTION</string>
         </config-file>
+        <resource-file src="resources/ios/GoogleService-Info.plist" />
+
+        <resource-file src="resources/ios/menu.png" />
+        <resource-file src="resources/ios/menu@2x.png" />
+        <resource-file src="resources/ios/marker.png" />
+        <resource-file src="resources/ios/marker@2x.png" />
+        <resource-file src="resources/ios/pin_shadow.png" />
+        <resource-file src="resources/ios/pin_shadow@2x.png" />
     </platform>
 </plugin>
